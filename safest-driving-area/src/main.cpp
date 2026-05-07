@@ -12,5 +12,9 @@ void getRegionInfo (string & regionName, int& accidents);
 bool isLower (int value1, int value2);
 void showLowest ( string regionName, int accidents);
 
+int main()
+{
+    cout << "hello world" << endl;
 
-
+    return 0;
+}
