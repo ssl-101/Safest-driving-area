@@ -14,6 +14,7 @@ void showLowest ( string regionName, int accidents);
 
 int main()
 {
+    // the total amount of regions to enter.
     const int regionAmount = 5;
 
     string regionName;
@@ -27,7 +28,7 @@ int main()
     regionLow = regionName;
     accidentLow = accidents;
     
-    //process the rest of the regions
+    /*process the rest of the regions until we get to 5*/
     for (int count =1; count < regionAmount; count ++)
     {
         getRegionInfo (regionName, accidents);
