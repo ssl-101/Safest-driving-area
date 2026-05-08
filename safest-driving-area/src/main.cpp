@@ -39,6 +39,22 @@ int main()
 
         }
     }
+     showLowest (regionLow, accidentLow);
+    
+     return 0;
 
+}
 
+/* post condition validations
+returned through perameters*/
+
+void getRegInfo (string& regionName, int& accidents)
+{
+    cout << " Enter name of the region: " ;
+    getline (cin, regionName);
+
+    cout << "Enter number of accidents: ";
+    cin >> accidents ;
+
+    
 }
