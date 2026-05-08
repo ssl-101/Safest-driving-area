@@ -45,6 +45,7 @@ int main()
 
 }
 
+
 /* post condition validations
 returned through perameters*/
 
@@ -62,4 +63,32 @@ void getRegInfo (string& regionName, int& accidents)
         cout << " Enter number of accidents: " ;
         cin >> accidents;
    }
+cin.ignore();
+
 }
+
+/* Preconditions , both values show 
+accident count valdates */
+
+bool islower (int value1, int value2)
+{
+    return value1 <= value2;
+
+}
+
+/* display the safest region and its accident count.
+
+preconditions: regionName matches to the reagion with
+the lowest count of accident.
+
+postconditions: 
+results are displayed */
+
+void showlowest (string regionName, int accidents)
+{
+    cout << "Safest region:" << regionName << endl;
+    cout << "Number of Accidents:" << accidents << endl;
+
+}
+
+
