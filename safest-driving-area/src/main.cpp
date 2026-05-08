@@ -1,5 +1,5 @@
 /*This program displays safest region
-based on accident amout , compared
+based on accident amounts , compared
 between two regions */
 
 #include <iostream>
@@ -48,7 +48,7 @@ int main()
 
 
 /* post condition validations
-returned through perameters*/
+returned through parameters*/
 
 void getRegionInfo (string& regionName, int& accidents)
 {
@@ -69,7 +69,7 @@ cin.ignore();
 }
 
 /* Preconditions , both values show 
-accident count valdates */
+accident count validates */
 
 bool isLower (int value1, int value2)
 {
@@ -79,7 +79,7 @@ bool isLower (int value1, int value2)
 
 /* display the safest region and its accident count.
 
-preconditions: regionName matches to the reagion with
+preconditions: regionName matches to the region with
 the lowest count of accident.
 
 postconditions: 
@@ -91,5 +91,3 @@ void showLowest (string regionName, int accidents)
     cout << "Number of Accidents:" << accidents << endl;
 
 }
-
-
