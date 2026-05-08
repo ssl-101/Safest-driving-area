@@ -14,7 +14,18 @@ double getCelsius (double fahrenheit);
 
 int main ()
 {
-    cout << "hello world"<<endl;
+    // table title 
+    cout<< "Celsius Temperature Table \n";
+    cout<< "------------------------- \n";
+
+    // setting up the line up of the display
+    cout << setw(11) << "Fahrenheit\n";
+    cout << setw(11) << "Celsius" << endl;
+
+    // loop for the temps, min 0 , max 20
+
+    for ( int fahrenheit )
+    
 
     return 0;
 }
