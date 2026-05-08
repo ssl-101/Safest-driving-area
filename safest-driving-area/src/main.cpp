@@ -7,7 +7,7 @@ between two regions */
 using namespace std;
 
 //Functions for input , analyze input, display
-void getRegionInfo (string & regionName, int& accidents);
+void getRegionInfo (string& regionName, int& accidents);
 // bool will determine true or false
 bool isLower (int value1, int value2);
 void showLowest ( string regionName, int accidents);
@@ -49,7 +49,7 @@ int main()
 /* post condition validations
 returned through perameters*/
 
-void getRegInfo (string& regionName, int& accidents)
+void getRegionInfo (string& regionName, int& accidents)
 {
     cout << " Enter name of the region: " ;
     getline (cin, regionName);
@@ -84,7 +84,7 @@ the lowest count of accident.
 postconditions: 
 results are displayed */
 
-void showlowest (string regionName, int accidents)
+void showLowest (string regionName, int accidents)
 {
     cout << "Safest region:" << regionName << endl;
     cout << "Number of Accidents:" << accidents << endl;
