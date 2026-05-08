@@ -56,5 +56,10 @@ void getRegInfo (string& regionName, int& accidents)
     cout << "Enter number of accidents: ";
     cin >> accidents ;
 
-    
+    while ( accidents <0 )
+    {
+        cout << " Error. number must be 0 or greater. \n"  ;
+        cout << " Enter number of accidents: " ;
+        cin >> accidents;
+   }
 }
