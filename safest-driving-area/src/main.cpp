@@ -23,19 +23,19 @@ int main()
     int accidentLow;
 
     // get first region info
-    getRegInfo (regionName, accidents);
+    getRegionInfo (regionName, accidents);
     regionLow = regionName;
     accidentLow = accidents;
     
     //process the rest of the regions
     for (int count =1; count < regionAmount; count ++)
     {
-        getRegInfo (regionName, accidents);
+        getRegionInfo (regionName, accidents);
 
-        if (islower (accidents, accidentLow))
+        if (isLower (accidents, accidentLow))
         {
             accidentLow = accidents;
-            regionLow = regionName
+            regionLow = regionName;
 
         }
     }
@@ -70,7 +70,7 @@ cin.ignore();
 /* Preconditions , both values show 
 accident count valdates */
 
-bool islower (int value1, int value2)
+bool isLower (int value1, int value2)
 {
     return value1 <= value2;
 
