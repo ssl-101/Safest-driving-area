@@ -28,6 +28,8 @@ int main ()
            fahrenheit <= degreeF_max;
            fahrenheit ++)
            {double celsius = getCelsius(fahrenheit) ;
+            /*set to 11 and setprecision
+            for decimal at 1*/
             cout << setw(11) << fahrenheit
             << setw(11) << fixed << setprecision(1)
             << celsius << endl;
