@@ -40,5 +40,5 @@ what the formula is to correctly display the
 answers chart the loop. */
 double getCelsius (double fahranheit)
 {
-    return (5.0/ 9.0) * (fahrenheit - 32);
+    return (5.0/ 9.0) * (fahranheit - 32);
 }
