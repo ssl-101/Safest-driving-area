@@ -24,8 +24,21 @@ int main ()
 
     // loop for the temps, min 0 , max 20
 
-    for ( int fahrenheit )
-    
-
+    for ( int fahrenheit = degreeF_min; 
+           fahrenheit <= degreeF_max;
+           fahrenheit ++)
+           {double celsius = getCelsius(fahrenheit) ;
+            cout << setw(11) << fahrenheit
+            << setw(11) << fixed << setprecision(1)
+            << celsius << endl;
+           }
     return 0;
+}
+
+/*function definition that tells the compiler 
+what the formula is to correctly display the
+answers chart the loop. */
+double getCelsius (double fahranheit)
+{
+    return (5.0/ 9.0) * (fahrenheit - 32);
 }
