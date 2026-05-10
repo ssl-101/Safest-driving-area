@@ -99,5 +99,36 @@ double getsqft()
 
 /* calculates gallons needed
 rounding up to the next number. */
-
+int gallonsForRoom (double sqft)
+{
 return ceil(sqft * GALLONS-PER_SQFT);
+}
+
+// Display paint job estimate
+void displayEstimate ( double paintCost, double laborCost,
+                       int gallons, double laborHours,
+                     double totalCost)
+{
+    cout << fixed << setprecision(2);
+
+    //formatting the title and display.
+
+    cout << "\n Paint Job Estimator /m";
+    cout << "--------------------------\n";
+
+    cout << "Gallons Needed: "
+         << gallons << endl;
+    
+    cout <<"Labor Hours: "
+         << laborHours << endl;
+
+    cout << "Paint Cost: "
+         << paintCost << endl;
+
+    cout << "Labor Cost: $"
+         << laborCost << endl;
+
+    cout << "Total Cost: $"
+         << totalCost << endl;
+
+}
