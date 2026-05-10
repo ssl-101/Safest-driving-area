@@ -26,20 +26,26 @@ int main ()
   double laborHours;
   double paintCosts;
   double laborCosts;
-  double totalHours;
+  double totalcost;
 
   rooms = getRooms();
-  paintPrice = getPricePer
+  paintPrice = getPricePer();
 
 
-  for (int count 1; count <= rooms; count++)
+  for (int count = 1; count <= rooms; count++)
   {
     sqft + getSqft();
-    totalSqft += sqft;
-    gallonsNeed += gallonsRoom(sqft);
-
+    totalsqft += sqft;
+    
+    gallonsNeeded += gallonsRoom(sqft);
   }
+   laborHours = totalsqft * laborHoursPer;
+   paintCosts = gallonsNeeded * paintPrice;
+   laborCosts = laborHours * laborRate;
+   totalcost = paintCosts + laborCosts;
 
+   displayEstimate ( paintCosts, laborCosts, gallonsNeeded, 
+                     laborHours, totalCost);
 
-
+return 0;
 }
