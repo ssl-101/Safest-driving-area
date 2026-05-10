@@ -9,7 +9,7 @@ using namespace std;
 int getRooms();
 int gallonsRoom();
 double getPricePer();
-double getSqft();
+double getsqft();
 void displayEstimate ( double laborCost, double paintCost,
                      int gallons, double laborHours, 
                      double totalCost);
@@ -34,10 +34,10 @@ int main ()
 
   for (int count = 1; count <= rooms; count++)
   {
-    sqft + getSqft();
+    sqft + getsqft();
     totalsqft += sqft;
     
-    gallonsNeeded += gallonsRoom(sqft);
+    gallonsNeeded += gallonsRoom( sqft );
   }
    laborHours = totalsqft * LABOR_HOURS-PER-SQFT;
    paintCosts = gallonsNeeded * paintPrice;
@@ -81,3 +81,23 @@ double getPricePerGallon()
     }
     return price;
 }
+
+// gets and validated square foot
+
+double getsqft()
+{
+    double sqft;
+    cout << "Enter square foot of wall space ";
+    cin >> sqft;
+   while (sqft < 0)
+   {
+    cout << "Error. square toot can not be negative: /;";
+    cin >> sqft;
+   }
+   return sqft;
+}
+
+/* calculates gallons needed
+rounding up to the next number. */
+
+return ceil(sqft * GALLONS-PER_SQFT);
