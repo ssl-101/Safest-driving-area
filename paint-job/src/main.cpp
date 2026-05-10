@@ -6,7 +6,7 @@
 using namespace std;
 
 //global constants
-const double GALLONS_PER = 1.0 / 110.0;
+const double GALLONS_PER_SQFT= 1.0 / 110.0;
 const double LABOR_HOURS_PER = 8.0 / 110.0;
 const double LABOR_RATE = 25.0;
 
@@ -15,9 +15,11 @@ int getRooms();
 int gallonsRoom( double sqft );
 double getPricePer();
 double getsqft();
-void displayEstimate ( double laborCost, double paintCost,
-                     int gallons, double laborHours, 
-                     double totalCost);
+void displayEstimate ( double laborCost, 
+                       double paintCost,
+                       int gallons, 
+                       double laborHours, 
+                       double totalCost);
 
 int main ()
 {
@@ -42,15 +44,15 @@ int main ()
     sqft = getsqft();
     totalsqft += sqft;
     
-    gallonsNeeded += gallonsRoom(sqft)
+    gallonsNeeded += gallonsRoom(sqft);
   }
   //calculations
    laborHours = totalsqft * LABOR_HOURS_PER ;
    paintCost = gallonsNeeded * paintPrice;
    laborCosts = laborHours * LABOR_RATE;
-   totalCost = paintPrice + laborCosts;
+   totalCost = paintCost + laborCosts;
 
-   displayEstimate ( paintPrice, laborCosts, gallonsNeeded, 
+   displayEstimate ( laborCosts, paintPrice, gallonsNeeded, 
                      laborHours, totalCost );
 
 return 0;
@@ -58,7 +60,7 @@ return 0;
 
 // Get and validate the room numbers
 
-int getNumRooms()
+int getRooms()
 {
     int rooms;
     cout << "Enter number of rooms: ";
@@ -74,7 +76,7 @@ return rooms;
 }
 
 // Gets and validates paint price
-double getPricePerGallon()
+double getPricePer()
 {
     double price;
     cout << "Enter paint price per gallon: ";
@@ -105,15 +107,17 @@ double getsqft()
 
 /* calculates gallons needed
 rounding up to the next number. */
-int gallonsForRoom (double sqft)
+int gallonsRoom (double sqft)
 {
-return ceil(sqft * GALLONS_PER );
+return ceil(sqft * GALLONS_PER_SQFT );
 }
 
 // Display paint job estimate
-void displayEstimate ( double paintCost, double laborCost,
-                       int gallons, double laborHours,
-                     double totalCost)
+void displayEstimate ( double laborCost, 
+                       double paintCost,
+                       int gallons, 
+                       double laborHours,
+                       double totalCost)
 {
     cout << fixed << setprecision(2);
 
@@ -128,13 +132,13 @@ void displayEstimate ( double paintCost, double laborCost,
     cout <<"Labor Hours: "
          << laborHours << endl;
 
-    cout << "Paint Cost: "
+    cout << "Paint Cost: $"
          << paintCost << endl;
 
     cout << "Labor Cost: $"
          << laborCost << endl;
 
-    cout << "Total Cost: $"
+    cout << "Total Cost: $" 
          << totalCost << endl;
 
 }
