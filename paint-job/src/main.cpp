@@ -39,9 +39,9 @@ int main ()
     
     gallonsNeeded += gallonsRoom(sqft);
   }
-   laborHours = totalsqft * laborHoursPer;
+   laborHours = totalsqft * LABOR_HOURS-PER-SQFT;
    paintCosts = gallonsNeeded * paintPrice;
-   laborCosts = laborHours * laborRate;
+   laborCosts = laborHours * LABOR-RATE;
    totalcost = paintCosts + laborCosts;
 
    displayEstimate ( paintCosts, laborCosts, gallonsNeeded, 
@@ -49,3 +49,22 @@ int main ()
 
 return 0;
 }
+
+// Get and validate the room numbers
+
+int getNumRooms()
+{
+    int rooms;
+    cout << "Enter number of rooms: ";
+    cin >> rooms;
+
+    while (rooms <1)
+    {
+        cout << "Error. Enter 1 or more rooms: ";
+        cin >> rooms;
+    }
+
+return rooms;
+}
+
+// Gets and validates paint price
