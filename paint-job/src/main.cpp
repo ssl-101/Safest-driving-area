@@ -68,3 +68,16 @@ return rooms;
 }
 
 // Gets and validates paint price
+double getPricePerGallon()
+{
+    double price;
+    cout << "Enter paint price per gallon: ";
+    cin >> price;
+
+    while( price < 10.0)
+    {
+        cout << "Error. Price must at least be $10.00 : ";
+        cin >> price;
+    }
+    return price;
+}
