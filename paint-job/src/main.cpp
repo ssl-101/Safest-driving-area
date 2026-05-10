@@ -5,6 +5,11 @@
 
 using namespace std;
 
+//global constants
+const double GALLONS_PER = 1.0 / 110.0;
+const double LABOR_HOURS_PER = 8.0 / 110.0;
+const double LABOR_RATE = 25.0;
+
 //function prototypes
 int getRooms();
 int gallonsRoom();
@@ -24,9 +29,9 @@ int main ()
   
   double totalsqft =0.0;
   double laborHours;
-  double paintCosts;
+  double paintCost;
   double laborCosts;
-  double totalcost;
+  double totalcCost;
 
   rooms = getRooms();
   paintPrice = getPricePer();
@@ -34,18 +39,18 @@ int main ()
 
   for (int count = 1; count <= rooms; count++)
   {
-    sqft + getsqft();
+    sqft = getsqft();
     totalsqft += sqft;
     
-    gallonsNeeded += gallonsRoom( sqft );
+    gallonsNeeded += gallonsRoom()
   }
-   laborHours = totalsqft * LABOR_HOURS-PER-SQFT;
-   paintCosts = gallonsNeeded * paintPrice;
-   laborCosts = laborHours * LABOR-RATE;
+   laborHours = totalsqft * LABOR_HOURS_PER 
+   paintCost = gallonsNeeded * paintPrice;
+   laborCosts = laborHours * LABOR_RATE;
    totalcost = paintCosts + laborCosts;
 
    displayEstimate ( paintCosts, laborCosts, gallonsNeeded, 
-                     laborHours, totalCost);
+                     laborHours, totalCost );
 
 return 0;
 }
@@ -101,7 +106,7 @@ double getsqft()
 rounding up to the next number. */
 int gallonsForRoom (double sqft)
 {
-return ceil(sqft * GALLONS-PER_SQFT);
+return ceil(sqft * GALLONS_PER );
 }
 
 // Display paint job estimate
