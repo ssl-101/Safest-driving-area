@@ -6,9 +6,9 @@
 using namespace std;
 
 //function prototypes
-int getNumRooms();
+int getRooms();
 int gallonsRoom();
-double getpriceper();
+double getPricePer();
 double getSqft();
 void displayEstimate ( double laborCost, double paintCost,
                      int gallons, double laborHours, 
@@ -16,5 +16,30 @@ void displayEstimate ( double laborCost, double paintCost,
 
 int main ()
 {
-    
+  int rooms;
+  int gallonsNeeded =0;
+
+  double paintPrice;
+  double sqft;
+  
+  double totalsqft =0.0;
+  double laborHours;
+  double paintCosts;
+  double laborCosts;
+  double totalHours;
+
+  rooms = getRooms();
+  paintPrice = getPricePer
+
+
+  for (int count 1; count <= rooms; count++)
+  {
+    sqft + getSqft();
+    totalSqft += sqft;
+    gallonsNeed += gallonsRoom(sqft);
+
+  }
+
+
+
 }
