@@ -12,7 +12,7 @@ const double LABOR_RATE = 25.0;
 
 //function prototypes
 int getRooms();
-int gallonsRoom();
+int gallonsRoom( double sqft );
 double getPricePer();
 double getsqft();
 void displayEstimate ( double laborCost, double paintCost,
@@ -31,7 +31,7 @@ int main ()
   double laborHours;
   double paintCost;
   double laborCosts;
-  double totalcCost;
+  double totalCost;
 
   rooms = getRooms();
   paintPrice = getPricePer();
@@ -42,14 +42,15 @@ int main ()
     sqft = getsqft();
     totalsqft += sqft;
     
-    gallonsNeeded += gallonsRoom()
+    gallonsNeeded += gallonsRoom(sqft)
   }
-   laborHours = totalsqft * LABOR_HOURS_PER 
+  //calculations
+   laborHours = totalsqft * LABOR_HOURS_PER ;
    paintCost = gallonsNeeded * paintPrice;
    laborCosts = laborHours * LABOR_RATE;
-   totalcost = paintCosts + laborCosts;
+   totalCost = paintPrice + laborCosts;
 
-   displayEstimate ( paintCosts, laborCosts, gallonsNeeded, 
+   displayEstimate ( paintPrice, laborCosts, gallonsNeeded, 
                      laborHours, totalCost );
 
 return 0;
